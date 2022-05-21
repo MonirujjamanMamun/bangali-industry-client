@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const BusinessSummary = () => {
     return (
         <div className="container my-14 px-6 mx-auto">
