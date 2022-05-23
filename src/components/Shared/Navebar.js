@@ -12,6 +12,7 @@ const Navebar = () => {
                     <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
+                        <li><Link to='/myportfolio'>My Portfolio</Link></li>
                         <li><Link to='/login'>Log In</Link></li>
                     </ul>
                 </div>
@@ -19,13 +20,14 @@ const Navebar = () => {
             </div>
             <div className="navbar-start hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><Link to='/'>Home</Link></li>
+                    <li><Link className='font-bold text-lg' to='/'>Home</Link></li>
                 </ul>
             </div>
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
-                    <li><Link to='/blog'>Blog</Link></li>
-                    <li><Link to='/login'>Log In</Link></li>
+                    <li><Link className='font-bold text-lg' to='/blog'>Blog</Link></li>
+                    <li><Link className='font-bold text-lg' to='/myportfolio'>My Portfolio</Link></li>
+                    <li><Link className='font-bold text-lg' to='/login'>Log In</Link></li>
                 </ul>
             </div>
 
