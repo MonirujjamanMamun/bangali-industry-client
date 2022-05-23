@@ -12,6 +12,7 @@ const Navebar = () => {
                     <ul tabIndex="0" className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
+                        <li><Link to='/login'>Log In</Link></li>
                     </ul>
                 </div>
                 <Link to='/' className="btn btn-ghost normal-case text-xl">Bangali Industry</Link>
@@ -24,6 +25,7 @@ const Navebar = () => {
             <div className="navbar-end hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
                     <li><Link to='/blog'>Blog</Link></li>
+                    <li><Link to='/login'>Log In</Link></li>
                 </ul>
             </div>
 

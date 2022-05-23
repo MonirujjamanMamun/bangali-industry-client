@@ -5,6 +5,8 @@ import Home from './components/Home/Home';
 import DataNotFound from './components/Shared/DataNotFound';
 import Blog from './components/Blog/Blog';
 import Navebar from './components/Shared/Navebar';
+import LogIn from './components/LogIn/LogIn';
+import SignUp from './components/LogIn/SignUp';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/datanotfound' element={<DataNotFound></DataNotFound>}></Route>
+        <Route path='/login' element={<LogIn></LogIn>}></Route>
+        <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<DataNotFound></DataNotFound>}></Route>
       </Routes>
 
     </div>
