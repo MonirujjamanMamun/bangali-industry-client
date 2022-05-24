@@ -1,11 +1,12 @@
-# Getting Started with Bangali Industry
+## Getting Started with 
+# Bangali Industry
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live site Link](https://github.com/facebook/create-react-app).
 
 ##  Features and Functionality
 - React 
 - React Router
-- firebase
+- Firebase
 - React Hooks
 - React firebase hooks
 - React Hooks form

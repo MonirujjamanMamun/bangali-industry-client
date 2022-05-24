@@ -100,7 +100,7 @@ const LogIn = () => {
 
                     <div className='divider'>OR</div>
 
-                    <p><small>New to To Do App <Link className='text-primary' to='/signin'>Create A New Account</Link> </small></p>
+                    <p><small>New to Bangali Industry <Link className='text-primary' to='/signup'>Create A New Account</Link> </small></p>
                     <button onClick={handelWithGoogle} type="submit" value='Continue With Google' className="btn text-white mt-3 max-w-xs">Continue With Google</button>
 
                 </form>

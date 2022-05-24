@@ -7,7 +7,7 @@ const MyPortfolio = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 w-11/12 mx-auto my-7">
                 <div className='rounded-lg shadow-lg bg-white p-7 ml-5'>
                     <h2 className="card-title font-bold">Name : Monirujjaman Monir</h2>
-                    <p>E-mail: monirujjamanmamun2357@gmail.com</p>
+                    <p><span className='font-bold'>E-mail</span>: monirujjamanmamun2357@gmail.com</p>
                     <h3 className='text-lg font-bold'>Bachelor of Arts(Hons) Bangla</h3>
                     <p>Grade achiev: 2022</p>
 
