@@ -12,11 +12,13 @@ const MyPortfolio = () => {
                     <p>Grade achiev: 2022</p>
 
                 </div>
-                <div className='rounded-lg shadow-lg bg-white p-7 ml-5 text-center'>
-                    <ul>
-                        <h3 className='text-lg font-bold'>List of Technologies : </h3>
+                <div className='rounded-lg shadow-lg bg-white p-7 ml-5 '>
+                    <h3 className='text-lg font-bold text-center'>List of Technologies : </h3>
+                    <ul className='ml-8'>
                         <li><span>HTML</span></li>
                         <li><span>CSS</span></li>
+                        <li><span>Bootstrap css</span></li>
+                        <li><span>Tailwind css</span></li>
                         <li><span>JavaScript</span></li>
                         <li><span>DOM Manipulation</span></li>
                         <li><span>JSON</span></li>
