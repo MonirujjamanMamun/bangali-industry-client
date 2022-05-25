@@ -18,6 +18,7 @@ import MakeAdmin from './components/Dashboard/MakeAdmin';
 import ManageProducts from './components/Dashboard/ManageProducts';
 import Purchase from './components/Purchase/Purchase';
 import RequareAuth from './components/Shared/RequareAuth';
+import ManageAllOrders from './components/Dashboard/ManageAllOrders';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
           <Route path='allorders' element={<AllOrders></AllOrders>}></Route>
           <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
+          <Route path='manageallorders' element={<ManageAllOrders></ManageAllOrders>}></Route>
           <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
           <Route path='manageproducts' element={<ManageProducts></ManageProducts>}></Route>
         </Route>
