@@ -3,24 +3,24 @@
         "name": "Injection Model tooling",
         "img": "https://www.rocheindustry.com/wp-content/uploads/2020/02/Injection-Molding-Tooling-1.jpg",
         "description": "Plastic material: PVC,PPR,PP.PE,ABS,POM,PPH…etc. Steel of Cavity & Core: DIN 1.2316/ DIN 1.2738/DIN 1.2344 /M300/ 718/ P20..etc. Cooling system: In core baffle cooling and in cavity plate chain drilling type cooling.",
-        "unite-price": "$20",
-        "available-quantity": "500",
-        "minimum-quantity": "10"
+        "unite_price": "$20",
+        "available_quantity": "500",
+        "minimum_quantity": "10"
     },
     {
         "name": "Pressure-Die-Casting",
         "img": "https://www.rocheindustry.com/wp-content/uploads/2020/02/Pressure-Die-Casting.jpg",
         "description": "Plastic material: PVC,PPR,PP.PE,ABS,POM,PPH…etc. Steel of Cavity & Core: DIN 1.2316/ DIN 1.2738/DIN 1.2344 /M300/ 718/ P20..etc. Cooling system: In core baffle cooling and in cavity plate chain drilling type cooling.",
-        "unite-price": "$20",
-        "available-quantity": "500",
-        "minimum-quantity": "10"
+        "unite_price": "$20",
+        "available_quantity": "500",
+        "minimum_quantity": "10"
     },
     {
         "name": "Rapid-Tooling",
         "img": "https://www.rocheindustry.com/wp-content/uploads/2020/02/Rapid-Tooling.jpg",
         "description": "Plastic material: PVC,PPR,PP.PE,ABS,POM,PPH…etc. Steel of Cavity & Core: DIN 1.2316/ DIN 1.2738/DIN 1.2344 /M300/ 718/ P20..etc. Cooling system: In core baffle cooling and in cavity plate chain drilling type cooling.",
-        "unite-price": "$20",
-        "available-quantity": "500",
-        "minimum-quantity": "10"
+        "unite_price": "$20",
+        "available_quantity": "500",
+        "minimum_quantity": "10"
     }
 ]

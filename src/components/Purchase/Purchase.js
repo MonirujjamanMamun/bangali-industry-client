@@ -1,16 +1,30 @@
 import React from 'react';
+import { useQuery } from 'react-query';
+import { useParams } from 'react-router-dom';
+import Loading from '../Shared/Loading';
 
 const Purchase = () => {
-    return (
-        <div>
-            <h1>This is Purchase page</h1>
-            {/* import {Rating} from 'material-ui-rating'
+    const { id } = useParams()
+    const { isLoading, error, data: product } = useQuery('product', () =>
+        fetch(`http://localhost:5000/${id}`).then(res =>
+            res.json()
+        )
+    )
+    if (isLoading) {
+        return <Loading />
+    }
+    console.log(product)
 
-            <Rating
-                value={3}
-                max={5}
-                onChange={(value) => console.log(`Rated with value ${value}`)}
-            /> */}
+    return (
+        <div class="card card-side bg-base-100 shadow-xl">
+            <figure><img src="https://api.lorem.space/image/movie?w=200&h=280" alt="Movie" /></figure>
+            <div class="card-body">
+                <h2 class="card-title">New movie is released!</h2>
+                <p>Click the button to watch on Jetflix app.</p>
+                <div class="card-actions justify-end">
+                    <button class="btn btn-primary">Watch</button>
+                </div>
+            </div>
         </div>
     );
 };

@@ -1,12 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
-    console.log(product)
-    const { name, img, } = product;
+    const { name, img, description, available_quantity, minimum_quantity, unite_price, _id } = product;
     return (
-        <div>
-            <h1>product</h1>
-            <h1>{name}</h1>
+        <div class="card w-96 bg-base-100 shadow-xl">
+            <figure><img src={img} alt={name} /></figure>
+            <div class="card-body">
+                <h2 class="card-title">{name}</h2>
+                <p>{description}</p>
+                <p>Available Quantity: {available_quantity}</p>
+                <p>Minimum Quantity: {minimum_quantity}</p>
+                <p>Unit Price: ${unite_price}</p>
+                <div class="card-actions justify-end">
+                    <Link to={`/purchase/${_id}`} class="btn btn-primary">Buy Now</Link>
+                </div>
+            </div>
         </div>
     );
 };
