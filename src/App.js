@@ -19,6 +19,7 @@ import ManageProducts from './components/Dashboard/ManageProducts';
 import Purchase from './components/Purchase/Purchase';
 import RequareAuth from './components/Shared/RequareAuth';
 import ManageAllOrders from './components/Dashboard/ManageAllOrders';
+import RequareAdmin from './components/Shared/RequareAdmin';
 
 function App() {
   return (
@@ -33,11 +34,13 @@ function App() {
           <Route path='myorder' element={<MyOrders></MyOrders>}></Route>
           <Route path='myreview' element={<MyReview></MyReview>}></Route>
           <Route path='myprofile' element={<MyProfile></MyProfile>}></Route>
-          <Route path='allorders' element={<AllOrders></AllOrders>}></Route>
-          <Route path='addproduct' element={<AddProduct></AddProduct>}></Route>
-          <Route path='manageallorders' element={<ManageAllOrders></ManageAllOrders>}></Route>
-          <Route path='makeadmin' element={<MakeAdmin></MakeAdmin>}></Route>
-          <Route path='manageproducts' element={<ManageProducts></ManageProducts>}></Route>
+
+          {/* <Route path='allorders' element={<AllOrders></AllOrders>}></Route> */}
+          <Route path='manageallorders' element={<RequareAdmin><ManageAllOrders></ManageAllOrders></RequareAdmin>}></Route>
+          <Route path='addproduct' element={<RequareAdmin><AddProduct></AddProduct></RequareAdmin>}></Route>
+          <Route path='makeadmin' element={<RequareAdmin><MakeAdmin></MakeAdmin></RequareAdmin>}></Route>
+          <Route path='manageproducts' element={<RequareAdmin><ManageProducts></ManageProducts></RequareAdmin>}></Route>
+
         </Route>
         <Route path='/login' element={<LogIn></LogIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
