@@ -20,6 +20,8 @@ import Purchase from './components/Purchase/Purchase';
 import RequareAuth from './components/Shared/RequareAuth';
 import ManageAllOrders from './components/Dashboard/ManageAllOrders';
 import RequareAdmin from './components/Shared/RequareAdmin';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -46,6 +48,7 @@ function App() {
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
         <Route path='*' element={<DataNotFound></DataNotFound>}></Route>
       </Routes>
+      <ToastContainer />
 
     </div>
   );
