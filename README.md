@@ -1,7 +1,7 @@
 ## Getting Started with 
 # Bangali Industry
 
-[Live site Link](https://github.com/facebook/create-react-app).
+[Live site Link]().
 
 ##  Features and Functionality
 - React 
