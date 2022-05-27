@@ -11,7 +11,7 @@ const Banner = () => {
                     <h1 className="mb-5 text-5xl font-bold text-white">Hello there</h1>
                     <p className="mb-5 text-white">BANGALI INDUSTRY</p>
                     <p className="mb-5 text-white"> Your Best Rapid Prototyping Services In Bangladesh.</p>
-                    <button className="btn btn-success">Contact us</button>
+                    <button className="btn btn-primary">Contact us</button>
                 </div>
             </div>
         </div>

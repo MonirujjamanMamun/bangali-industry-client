@@ -22,6 +22,7 @@ import ManageAllOrders from './components/Dashboard/ManageAllOrders';
 import RequareAdmin from './components/Shared/RequareAdmin';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import PaymentPage from './components/Dashboard/PaymentPage';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
         <Route path='/purchase/:id' element={<RequareAuth><Purchase></Purchase></RequareAuth>}></Route>
+        <Route path='/payment/:id' element={<RequareAuth><PaymentPage></PaymentPage></RequareAuth>}></Route>
         <Route path='/myportfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='/dashboard' element={<Dashboard></Dashboard>}>
           <Route path='myorder' element={<MyOrders></MyOrders>}></Route>

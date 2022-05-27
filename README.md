@@ -1,7 +1,7 @@
 ## Getting Started with 
 # Bangali Industry
 
-[Live site Link]().
+[Live site Link](https://bangali-industry-bdeca.web.app/).
 
 ##  Features and Functionality
 - React 

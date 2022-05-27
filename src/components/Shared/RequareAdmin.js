@@ -8,14 +8,14 @@ import { signOut } from 'firebase/auth';
 
 const RequareAdmin = ({ children }) => {
     const [user, loading] = useAuthState(auth);
-    const [admin, adminLoading] = useAdmin(user);
+    const [admin, adminLoading] = useAdmin();
     const location = useLocation();
 
     if (loading || adminLoading) {
         return <Loading></Loading>
     }
 
-    if (!user || admin) {
+    if (!user || admin === false) {
         signOut(auth)
         return <Navigate to="/login" state={{ from: location }} replace />;
     }

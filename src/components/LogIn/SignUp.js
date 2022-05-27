@@ -3,9 +3,9 @@ import { useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useForm } from "react-hook-form";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
-// import useTokon from '../../Hooks/useTokon';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../Shared/Loading';
+import useToken from '../../hooks/useToken';
 
 
 const SignUp = () => {
@@ -13,7 +13,10 @@ const SignUp = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
     const navigate = useNavigate();
-    // const [tokon] = useTokon(user || guser);
+    const location = useLocation;
+    let from = location.state?.from?.pathname || "/";
+
+    const [tokon] = useToken(user);
 
     let signError;
 
@@ -21,9 +24,9 @@ const SignUp = () => {
         signError = <p className='text-white bg-red-700 px-2 py-3 rounded-lg'>Error: {error?.message || updateError?.message}</p>
     }
 
-    // if (tokon) {
-    //     navigate("/appointment")
-    // }
+    if (tokon) {
+        navigate(from, { replace: true });
+    }
 
     if (loading || updating) {
         return <Loading></Loading>
@@ -109,7 +112,7 @@ const SignUp = () => {
                     </div>
                     {/* password validation end here  */}
                     {signError}
-                    <input type="submit" value='Sign Up' className="btn text-white mt-3 max-w-xs" />
+                    <input type="submit" value='Sign Up' className="btn text-white bg-[#3d4451] mt-3 max-w-xs" />
                     <p><small>Already have an Account <Link className='text-primary' to='/login'>Log In</Link> </small></p>
                 </form>
             </div>

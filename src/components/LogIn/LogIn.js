@@ -17,7 +17,8 @@ const LogIn = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
     const [token] = useToken()
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
     const location = useLocation
     let from = location.state?.from?.pathname || "/";
     let signError;
@@ -97,12 +98,12 @@ const LogIn = () => {
                     {/* password validation end here  */}
                     {signError}
                     <input type="submit" value='Forget Password?' className='text-left' />
-                    <input type="submit" value='Log In' className="btn text-white mt-3 max-w-xs" />
+                    <input type="submit" value='Log In' className="btn text-white bg-[#3d4451] mt-3 max-w-xs" />
 
                     <div className='divider'>OR</div>
 
                     <p><small>New to Bangali Industry <Link className='text-primary' to='/signup'>Create A New Account</Link> </small></p>
-                    <button onClick={handelWithGoogle} type="submit" value='Continue With Google' className="btn text-white mt-3 max-w-xs">Continue With Google</button>
+                    <button onClick={handelWithGoogle} type="submit" value='Continue With Google' className="btn text-white bg-[#3d4451] mt-3 max-w-xs">Continue With Google</button>
 
                 </form>
             </div>

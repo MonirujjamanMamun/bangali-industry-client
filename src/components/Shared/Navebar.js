@@ -14,7 +14,7 @@ const Navebar = () => {
     const menuItem =
         <>
             <li><Link className='font-bold text-lg' to='/'>Home</Link></li>
-            <li><Link className='font-bold text-lg' to='/purchase'>Purchase</Link></li>
+            {/* <li><Link className='font-bold text-lg' to='/purchase'>Purchase</Link></li> */}
             <li><Link className='font-bold text-lg' to='/blog'>Blog</Link></li>
             <li><Link className='font-bold text-lg' to='/myportfolio'>Portfolio</Link></li>
             {user ? <>
