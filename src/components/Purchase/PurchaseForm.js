@@ -20,7 +20,7 @@ const PurchaseForm = ({ product, user }) => {
         const totalPrice = parseInt(quantity) * parseInt(unit_price);
         const status = 'unpaid';
         const orderInfo = { name, email, totalPrice, status, quantity }
-        fetch('http://localhost:5000/orders', {
+        fetch('https://frozen-scrubland-19208.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

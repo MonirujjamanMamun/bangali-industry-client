@@ -10,7 +10,7 @@ const MyProfile = () => {
     const [user] = useAuthState(auth)
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/user?email=${user?.email}`)
+            fetch(`https://frozen-scrubland-19208.herokuapp.com/user?email=${user?.email}`)
                 .then(res => res.json())
                 .then(data => setProfile(data))
         }
@@ -26,7 +26,7 @@ const MyProfile = () => {
         const linkedin = e.target.linkedin.value;
         const updateUser = { education, location, phone, linkedin };
         console.log(updateUser)
-        fetch(`http://localhost:5000/user/${email}`, {
+        fetch(`https://frozen-scrubland-19208.herokuapp.com/user/${email}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

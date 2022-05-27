@@ -10,7 +10,7 @@ const Purchase = () => {
     const { id } = useParams()
     const [user] = useAuthState(auth)
     const { isLoading, error, data: product } = useQuery('product', () =>
-        fetch(`http://localhost:5000/product/${id}`)
+        fetch(`https://frozen-scrubland-19208.herokuapp.com/product/${id}`)
             .then(res => res.json())
     )
     if (isLoading) {

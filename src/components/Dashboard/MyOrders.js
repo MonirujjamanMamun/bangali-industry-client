@@ -9,7 +9,7 @@ const MyOrders = () => {
     const [user] = useAuthState(auth)
     const email = user?.email;
     const { isLoading, error, data: myorders } = useQuery('myorders', () =>
-        fetch(`http://localhost:5000/orders?email=${email}`)
+        fetch(`https://frozen-scrubland-19208.herokuapp.com/orders?email=${email}`)
             .then(res => res.json())
     )
     if (isLoading) {

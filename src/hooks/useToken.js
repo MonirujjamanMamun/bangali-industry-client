@@ -10,7 +10,7 @@ const useToken = () => {
             const name = user.displayName;
             const email = user.email;
             const currentUser = { name, email }
-            fetch(`http://localhost:5000/user?email=${user.email}`, {
+            fetch(`https://frozen-scrubland-19208.herokuapp.com/user?email=${user.email}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

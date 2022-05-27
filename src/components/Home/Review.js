@@ -5,7 +5,7 @@ import ReviewRow from './ReviewRow';
 
 const Review = () => {
     const { isLoading, error, data: reviews } = useQuery('reviews', () =>
-        fetch(`http://localhost:5000/reviews`)
+        fetch(`https://frozen-scrubland-19208.herokuapp.com/reviews`)
             .then(res => res.json())
     )
     if (isLoading) {

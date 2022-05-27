@@ -12,7 +12,7 @@ const MyReview = () => {
         const name = user.displayName;
         const reviewData = { rating, description, name };
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://frozen-scrubland-19208.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

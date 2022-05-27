@@ -5,7 +5,7 @@ import MakeAdminRow from './MakeAdminRow';
 
 const MakeAdmin = () => {
     const { isLoading, error, data: users, refetch } = useQuery('users', () =>
-        fetch('http://localhost:5000/users').then(res =>
+        fetch('https://frozen-scrubland-19208.herokuapp.com/users').then(res =>
             res.json()
         )
     )

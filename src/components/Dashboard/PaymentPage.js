@@ -9,7 +9,7 @@ import CheckoutForm from './CheckoutForm';
 const PaymentPage = () => {
     const { id } = useParams()
     const { isLoading, error, data: order } = useQuery('order', () =>
-        fetch(`http://localhost:5000/order/${id}`)
+        fetch(`https://frozen-scrubland-19208.herokuapp.com/order/${id}`)
             .then(res => res.json())
     )
     if (isLoading) {
@@ -21,7 +21,7 @@ const PaymentPage = () => {
         <div className='px-20'>
             <div class="card w-full bg-base-100 shadow-xl">
                 <div class="card-body">
-                    <h2 class="card-title">{name}</h2>
+                    <h2 class="card-title"> {name}</h2>
                     <p>Quantity:{quantity}</p>
                     <p>Price:{totalPrice}</p>
                 </div>
