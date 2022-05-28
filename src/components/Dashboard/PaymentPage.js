@@ -13,7 +13,7 @@ const PaymentPage = () => {
             .then(res => res.json())
     )
     if (isLoading) {
-        return <Loading />
+        return <Loading></Loading>;
     }
     const stripePromise = loadStripe('pk_test_51L47IwKLivP7yRsGuMdTwmu9ZZZ0uWk0a8UHBNHl2wYc9uucugWAiBcHGJHFYVVtXFFzhbgcNkkppVVCJaWeSWcj00WsB9J4Od');
     const { name, totalPrice, quantity } = order;
@@ -30,7 +30,8 @@ const PaymentPage = () => {
                 <div class="card-body">
                     <Elements stripe={stripePromise}>
                         <CheckoutForm
-                            order={order} />
+                            order={order}
+                        />
                     </Elements>
                 </div>
             </div>

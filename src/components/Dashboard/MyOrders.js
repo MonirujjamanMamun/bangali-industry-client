@@ -1,19 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useQuery } from 'react-query';
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import MyOrderRow from './MyOrderRow';
 
 const MyOrders = () => {
     const [user] = useAuthState(auth)
+    const [data, setData] = useState({})
     const email = user?.email;
-    const { isLoading, error, data: myorders } = useQuery('myorders', () =>
+    const { isLoading, error, data: myorders, refetch } = useQuery('myorders', () =>
         fetch(`https://frozen-scrubland-19208.herokuapp.com/orders?email=${email}`)
             .then(res => res.json())
     )
     if (isLoading) {
         return <Loading />
+    }
+
+    const handleDelete = (id) => {
+        fetch(`https://frozen-scrubland-19208.herokuapp.com/order/${id}`, {
+            method: 'DELETE'
+        }).then(res => res.json())
+            .then(data => {
+                if (data.deletedCount) {
+                    toast.success('Delete successful')
+                    refetch()
+                }
+            })
+
     }
 
     return (
@@ -36,12 +51,25 @@ const MyOrders = () => {
                                 key={order._id}
                                 order={order}
                                 num={index}
+                                setData={setData}
                             />)
                         }
                     </tbody>
                 </table>
+                <div><input type="checkbox" id="my-modal-6" class="modal-toggle" />
+                    <div class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                            <h3 class="font-bold text-lg">Are you sure?</h3>
+                            <p class="py-4">You've been delete {data.name}</p>
+                            <div class="modal-action">
+                                <label for="my-modal-6" class="btn">Cancle</label>
+                                <label for="my-modal-6" onClick={() => handleDelete(data._id)} class="btn">Delete</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </div >
     );
 };
 

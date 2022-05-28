@@ -29,7 +29,7 @@ const MyReview = () => {
     }
     return (
         <div className='w-full mt-8 px-6'>
-            <h2 className='text-3xl font-bold mb-10'>Order Form</h2>
+            <h2 className='text-3xl font-bold mb-10'>Review</h2>
             <form className='flex flex-col gap-4' onSubmit={handleForm}>
                 <input name='rating' type="number" placeholder="Rating" class="input input-bordered w-full max-w-xs" required />
                 <textarea name='description' class="textarea textarea-bordered w-full max-w-xs" placeholder="Bio"></textarea>
