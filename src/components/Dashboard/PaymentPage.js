@@ -19,15 +19,15 @@ const PaymentPage = () => {
     const { name, totalPrice, quantity } = order;
     return (
         <div className='px-20'>
-            <div class="card w-full bg-base-100 shadow-xl">
-                <div class="card-body">
-                    <h2 class="card-title"> {name}</h2>
+            <div className="card w-full bg-base-100 shadow-xl">
+                <div className="card-body">
+                    <h2 className="card-title"> {name}</h2>
                     <p>Quantity:{quantity}</p>
                     <p>Price:{totalPrice}</p>
                 </div>
             </div>
-            <div class="card w-full bg-base-100 shadow-xl">
-                <div class="card-body">
+            <div className="card w-full bg-base-100 shadow-xl">
+                <div className="card-body">
                     <Elements stripe={stripePromise}>
                         <CheckoutForm
                             order={order}

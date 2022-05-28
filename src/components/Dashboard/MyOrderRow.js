@@ -14,7 +14,7 @@ const MyOrderRow = ({ order, num, setData }) => {
                 <p>{status}</p>
                 <p>{transactionId}</p>
             </>}</td>
-            <td><label onClick={() => setData({ name, _id })} for="my-modal-6" class="btn  btn-sm" disabled={status === 'paid' ? true : false}>Delete</label>
+            <td><label onClick={() => setData({ name, _id })} for="my-modal-6" className="btn  btn-sm" disabled={status === 'paid' ? true : false}>Delete</label>
             </td>
         </tr>
     );

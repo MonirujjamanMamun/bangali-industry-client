@@ -20,10 +20,10 @@ const Purchase = () => {
     const { name, img, description, available_quantity, minimum_quantity, unit_price, _id } = product;
     return (
         <div className='grid grid-cols-1 md:grid-cols-2 gap-10 container mx-auto mt-16'>
-            <div class="card card-side bg-base-100 shadow-xl">
+            <div className="card card-side bg-base-100 shadow-xl">
                 <figure><img src={img} alt="Movie" /></figure>
-                <div class="card-body">
-                    <h2 class="card-title">{name}</h2>
+                <div className="card-body">
+                    <h2 className="card-title">{name}</h2>
                     <p>{description}</p>
                     <p>Available Quantity: {available_quantity}</p>
                     <p>Minimum Quantity: {minimum_quantity}</p>

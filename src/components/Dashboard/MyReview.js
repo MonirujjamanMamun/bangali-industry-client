@@ -31,9 +31,9 @@ const MyReview = () => {
         <div className='w-full mt-8 px-6'>
             <h2 className='text-3xl font-bold mb-10'>Review</h2>
             <form className='flex flex-col gap-4' onSubmit={handleForm}>
-                <input name='rating' type="number" placeholder="Rating" class="input input-bordered w-full max-w-xs" required />
-                <textarea name='description' class="textarea textarea-bordered w-full max-w-xs" placeholder="Bio"></textarea>
-                <input type="submit" value={'Add Review'} class="btn btn-primary max-w-xs "
+                <input name='rating' type="number" placeholder="Rating" className="input input-bordered w-full max-w-xs" required />
+                <textarea name='description' className="textarea textarea-bordered w-full max-w-xs" placeholder="Bio"></textarea>
+                <input type="submit" value={'Add Review'} className="btn btn-primary max-w-xs "
                 />
             </form>
         </div>

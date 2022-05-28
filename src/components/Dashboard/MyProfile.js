@@ -55,12 +55,12 @@ const MyProfile = () => {
             <div className='w-full px-10'>
                 <h2 className='text-3xl font-bold mb-4'>Profile</h2>
                 <form className='flex flex-col gap-4' onSubmit={handleForm}>
-                    <input name='education' type="text" placeholder="Education" class="input input-bordered w-full max-w-lg" required />
-                    <input name='location' type="text" placeholder="Location" class="input input-bordered w-full max-w-lg" required />
-                    <input name='phone' type="tel" placeholder="Phone" class="input input-bordered w-full max-w-lg" required />
-                    <input name='linkedin' type="text" placeholder="LInkedin Profile Link" class="input input-bordered w-full max-w-lg" />
+                    <input name='education' type="text" placeholder="Education" className="input input-bordered w-full max-w-lg" required />
+                    <input name='location' type="text" placeholder="Location" className="input input-bordered w-full max-w-lg" required />
+                    <input name='phone' type="tel" placeholder="Phone" className="input input-bordered w-full max-w-lg" required />
+                    <input name='linkedin' type="text" placeholder="LInkedin Profile Link" className="input input-bordered w-full max-w-lg" />
 
-                    <input type="submit" value={'Update Profile'} class="btn btn-primary max-w-2xl " />
+                    <input type="submit" value={'Update Profile'} className="btn btn-primary max-w-2xl " />
                 </form>
             </div>
         </div>

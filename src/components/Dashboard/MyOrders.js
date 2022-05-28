@@ -33,8 +33,8 @@ const MyOrders = () => {
 
     return (
         <div className='w-full'>
-            <div class="overflow-x-auto ">
-                <table class="table w-full">
+            <div className="overflow-x-auto ">
+                <table className="table w-full">
                     <thead>
                         <tr>
                             <th></th>
@@ -56,14 +56,14 @@ const MyOrders = () => {
                         }
                     </tbody>
                 </table>
-                <div><input type="checkbox" id="my-modal-6" class="modal-toggle" />
-                    <div class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box">
-                            <h3 class="font-bold text-lg">Are you sure?</h3>
-                            <p class="py-4">You've been delete {data.name}</p>
-                            <div class="modal-action">
-                                <label for="my-modal-6" class="btn">Cancle</label>
-                                <label for="my-modal-6" onClick={() => handleDelete(data._id)} class="btn">Delete</label>
+                <div><input type="checkbox" id="my-modal-6" className="modal-toggle" />
+                    <div className="modal modal-bottom sm:modal-middle">
+                        <div className="modal-box">
+                            <h3 className="font-bold text-lg">Are you sure?</h3>
+                            <p className="py-4">You've been delete {data.name}</p>
+                            <div className="modal-action">
+                                <label for="my-modal-6" className="btn">Cancle</label>
+                                <label for="my-modal-6" onClick={() => handleDelete(data._id)} className="btn">Delete</label>
                             </div>
                         </div>
                     </div>
