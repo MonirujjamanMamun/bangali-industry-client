@@ -10,3 +10,7 @@
 - React Hooks
 - React firebase hooks
 - React Hooks form
+- Tailwind
+- Daisy Ui
+- Context Api
+
